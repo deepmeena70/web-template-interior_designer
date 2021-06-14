@@ -1,0 +1,12 @@
+// includes
+@include font-face('silkserif', '/assets/fonts/Silk Serif Regular.otf', normal, none);
+@include font-face('silkserif', '/assets/fonts/Silk Serif Regular Italic.otf', normal, italic);
+@include font-face('silkserif', '/assets/fonts/Silk Serif Bold.otf', bold, none);
+@include font-face('silkserif', '/assets/fonts/Silk Serif Bold Italic.otf', bold, italic);
+@include font-face('silkserif', '/assets/fonts/Silk Serif SemiBold.otf', 500, none);
+@include font-face('silkserif', '/assets/fonts/Silk Serif SemiBold Italic.otf', 500, italic);
+// body
+body {
+    font-family: $font-stack;
+    color: $brown;
+}
