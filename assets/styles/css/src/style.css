@@ -521,6 +521,32 @@ body {
   color: #52442a;
 }
 
+h1 {
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2.5em;
+}
+
+h4 {
+  font-size: 2em;
+}
+
+h5 {
+  font-size: 1.5em;
+}
+
+.text {
+  font-size: 2em;
+  letter-spacing: 1.2px;
+  line-height: 1.2em;
+}
+
 body {
   background-color: #faf3ed;
 }
@@ -528,100 +554,287 @@ body {
 .container {
   display: -ms-grid;
   display: grid;
-  grid-template: "h h" 50px "p p" "f f"/6fr 6fr;
+  grid: 100px auto auto/1fr;
   width: 100%;
   height: 1200px;
 }
 
+header {
+  position: relative;
+}
+
+#theme {
+  position: absolute;
+  right: 2em;
+  top: 30px;
+}
+
+#theme span {
+  margin-right: 1.2em;
+}
+
 .page {
   position: relative;
-  grid-area: p;
   margin-left: 2em;
   margin-right: 2em;
+  height: 500em;
   overflow: hidden;
 }
 
 .page .brand {
-  position: absolute;
+  position: relative;
+  top: 30px;
+  left: 240px;
+}
+
+.page .brand .text-intro {
+  font-size: 12em;
   text-transform: uppercase;
-  top: 100px;
-  font-size: 8em;
-  letter-spacing: 4px;
-  -webkit-animation: brand-slide 4s linear forwards;
-          animation: brand-slide 4s linear forwards;
 }
 
-@-webkit-keyframes brand-slide {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
-  }
-}
-
-@keyframes brand-slide {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
-  }
-}
-
-#front-show {
-  position: absolute;
-  width: 700px;
-  height: 800px;
+.page .front-img {
+  position: relative;
   overflow: hidden;
-  z-index: -1;
-  top: 100px;
-  left: 40%;
-  padding: 0;
-  -webkit-animation: front-show-slide 4s linear forwards;
-          animation: front-show-slide 4s linear forwards;
+  width: 1200px;
+  height: 540px;
+  top: 50px;
+  left: 240px;
 }
 
-#front-show video {
+.page .front-img div {
   position: absolute;
-  left: -5%;
+  top: -200px;
 }
 
-@-webkit-keyframes front-show-slide {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  70% {
-    -webkit-transform: translateX(300px);
-            transform: translateX(300px);
-  }
-  100% {
-    -webkit-transform: translateX(280px);
-            transform: translateX(280px);
-  }
+#desktop-logo {
+  position: fixed;
+  top: 150px;
+  padding-left: 1.2em;
 }
 
-@keyframes front-show-slide {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  70% {
-    -webkit-transform: translateX(300px);
-            transform: translateX(300px);
-  }
-  100% {
-    -webkit-transform: translateX(280px);
-            transform: translateX(280px);
-  }
+#desktop-menu {
+  position: fixed;
+  top: 220px;
 }
 
-footer {
-  grid-area: f;
+#desktop-menu div {
+  margin-bottom: 1.2em;
+  padding-left: 1.2em;
+}
+
+#desktop-menu a {
+  color: #52442a;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+#about {
+  position: relative;
+  top: 100px;
+  left: 240px;
+  height: 800px;
+}
+
+#about h1 {
+  position: absolute;
+  top: 160px;
+}
+
+#about .text {
+  position: absolute;
+  width: 35%;
+  height: 500px;
+  top: 240px;
+}
+
+#about .img-1 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 100px;
+  right: 340px;
+  overflow: hidden;
+}
+
+#about .img-1 img {
+  width: 430px;
+  height: 500px;
+}
+
+#main-task {
+  position: relative;
+  left: 240px;
+  height: 800px;
+}
+
+#main-task h1 {
+  position: absolute;
+  text-align: center;
+  width: 60%;
+  left: 5%;
+}
+
+#main-task .text {
+  position: absolute;
+  width: 60%;
+  height: 500px;
+  top: 80px;
+  text-align: center;
+  left: 5%;
+}
+
+#main-task .work-show {
+  position: absolute;
+  top: 240px;
+  width: 1050px;
+  height: 500px;
+  overflow: hidden;
+}
+
+#main-task .work-show video {
+  position: absolute;
+  left: -2%;
+}
+
+#interior-design {
+  position: relative;
+  left: 240px;
+  height: 70em;
+}
+
+#interior-design h2 {
+  position: absolute;
+  width: 60%;
+  left: 5%;
+  text-align: center;
+}
+
+#interior-design .portfolio-container {
+  position: absolute;
+  top: 80px;
+}
+
+#interior-design .portfolio-container .contemporary,
+#interior-design .portfolio-container .modern-style,
+#interior-design .portfolio-container .traditional,
+#interior-design .portfolio-container .minimalist,
+#interior-design .portfolio-container .mediterranean {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+}
+
+#interior-design .portfolio-container .contemporary .img-container,
+#interior-design .portfolio-container .modern-style .img-container,
+#interior-design .portfolio-container .traditional .img-container,
+#interior-design .portfolio-container .minimalist .img-container,
+#interior-design .portfolio-container .mediterranean .img-container {
+  margin-top: 80px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#interior-design .portfolio-container .contemporary .img-container img {
+  width: 400px;
+  height: 400px;
+}
+
+#interior-design .portfolio-container .modern-style {
+  left: 450px;
+}
+
+#interior-design .portfolio-container .modern-style .img-container img {
+  width: 800px;
+  height: 400px;
+}
+
+#interior-design .portfolio-container .traditional {
+  left: 900px;
+}
+
+#interior-design .portfolio-container .traditional .img-container img {
+  width: 400px;
+  height: 400px;
+}
+
+#interior-design .portfolio-container .minimalist {
+  top: 500px;
+}
+
+#interior-design .portfolio-container .minimalist .img-container img {
+  width: 400px;
+  height: 400px;
+}
+
+#interior-design .portfolio-container .mediterranean {
+  top: 500px;
+  left: 450px;
+}
+
+#interior-design .portfolio-container .mediterranean .img-container img {
+  width: 400px;
+  height: 400px;
+}
+
+#contact-form-container {
+  position: relative;
+  left: 240px;
+}
+
+#contact-form-container h2 {
+  position: absolute;
+  text-align: center;
+  width: 60%;
+  left: 5%;
+  text-transform: capitalize;
+}
+
+#contact-form-container .form {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  grid: auto/1fr;
+  gap: 20px;
+  top: 110px;
+  left: 18%;
+}
+
+#contact-form-container .form input {
+  width: 500px;
+  height: 2.5em;
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: #52442a;
+  background-color: transparent;
+  padding-left: 1.2em;
+}
+
+#contact-form-container .form input:focus,
+#contact-form-container .form textarea:focus {
+  outline: none;
+}
+
+#contact-form-container .form textarea {
+  width: 500px;
+  height: 6em;
+  resize: none;
+  overflow: auto;
+  background-color: white;
+  border: none;
+  color: #52442a;
+  padding-left: 1.2em;
+  padding-top: 1em;
+}
+
+#contact-form-container .form input[type="submit"] {
+  border: 2px solid #52442a;
+  width: 525px;
+  height: 3em;
+  text-transform: capitalize;
 }
 /*# sourceMappingURL=style.css.map */
